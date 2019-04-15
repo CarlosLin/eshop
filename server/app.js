@@ -7,8 +7,6 @@ var logger = require('morgan')
 var cors = require('cors')
 var mysql = require('mysql')
 
-var indexRouter = require('./routes/index')
-var usersRouter = require('./routes/users')
 
 // Db import
 var app = express()
@@ -44,8 +42,6 @@ app.use(function(req, res, next) {
   next()
 })
 
-app.use('/', indexRouter)
-app.use('/users', usersRouter)
 
 // API
 
